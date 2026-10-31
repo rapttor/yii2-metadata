@@ -1,0 +1,12 @@
+# rapttor/yii2-metadata
+
+> Yii2 component: per-record JSON metadata in one shared table (key, remote_table, remote_id -> content, history, rev). get/value/set/patch/modify with revision check, history of replaced values, export and delete per account. No runtime dependencies besides Yii2.
+
+Integrating or changing this package: read AGENTS.md first.
+
+- [AGENTS.md](AGENTS.md): when to use it, integration steps, account deletion and export, rules
+- [README.md](README.md): install, config, API, guarantees
+- [src/Metadata.php](src/Metadata.php): the component
+- [src/Schema.php](src/Schema.php) and [src/migrations/](src/migrations/): the table
+- [tests/MetadataTest.php](tests/MetadataTest.php): behaviour covered (history, cap, concurrency, export, delete)
+- Used by https://github.com/rapttor/yii2-legal for consents (`key=legal`, `remote_table=profile`)
